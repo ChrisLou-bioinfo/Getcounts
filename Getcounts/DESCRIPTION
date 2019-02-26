@@ -1,0 +1,13 @@
+Package: Getcounts
+Title: Collect ReadsPerGene.out.tab files into one table depending on colname.
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Chris",
+           family = "Lou",
+           role = c("aut", "cre"),
+           email = "loujiacheng1986@foxmail.com")
+Description: After Mapping by STAR or Hiseq2, Collect ReadsPerGene.out.tab files into one table depending on specific strand seq for DEseq2 analysis 
+License: Apache License 2.0
+Encoding: UTF-8
+LazyData: true
+
