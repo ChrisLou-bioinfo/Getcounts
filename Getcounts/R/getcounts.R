@@ -39,4 +39,3 @@ getcounts<-function(prefixlength=10,colss="Nss"){
   write.csv(rawcounts, file = 'rawcounts.csv')
   return(rawcounts)
 }
-
