@@ -34,7 +34,7 @@ getcounts<-function(prefixlength=10,colss="Nss"){
     data.out <- full_join(data.out, df.use,by="V1")
   }
   data.out1<-data.out[-(1:4),-2]
-  colnames(data.out1)[2]<-str_sub(dir(pattern = "*tab")[1], start = Start, end = End)
+  colnames(data.out1)[2]<-str_sub(dir(pattern = "*tab")[1], start = 1, end = prefixlength)
   rawcounts=data.frame(data.out1[,-1],row.names = data.out1[,1])
   write.csv(rawcounts, file = 'rawcounts.csv')
   return(rawcounts)
