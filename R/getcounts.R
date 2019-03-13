@@ -1,4 +1,6 @@
+
 getcounts<-function(prefixlength=10,col=ss){
+
   if(!require("dplyr")) BiocManager::install("dplyr",update = F,ask = F)
   if(!require("stringr")) BiocManager::install("stringr",update = F,ask = F)
   library(dplyr)
@@ -31,5 +33,4 @@ getcounts<-function(prefixlength=10,col=ss){
   write.csv(rawcounts, file = 'rawcounts.csv')
   return(rawcounts)
 }
-
 

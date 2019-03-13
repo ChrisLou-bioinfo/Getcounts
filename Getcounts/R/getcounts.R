@@ -1,11 +1,12 @@
-getcounts<-function(Start=1,End=10,col=ss){
+
+getcounts<-function(prefixlength=10,col=ss){
   if(!require("dplyr")) BiocManager::install("dplyr",update = F,ask = F)
   if(!require("stringr")) BiocManager::install("stringr",update = F,ask = F)
   library(dplyr)
   library(stringr)
   fall <- dir(pattern = "*tab")
   fall1<-fall[1]
-  str <- str_sub(fall1,start = Start, end = End)
+  str <- str_sub(fall1,start = 1, end = prefixlength)
   df.read <- read.table(fall1)
   if (col=='ss'){
     df.use <- data.frame(v1 = df.read$V1, v4 = df.read$V4)
@@ -15,7 +16,7 @@ getcounts<-function(Start=1,End=10,col=ss){
   colnames(df.use)<-c('V1',str)
   data.out<-df.use[1:4,]
   for (fnow in fall) {
-    str <- str_sub(fnow, start = Start, end = End)
+    str <- str_sub(fnow, start = 1, end = prefixlength)
     df.read <- read.table(fnow)
     if (col=='ss'){
       df.use <- data.frame(v1 = df.read$V1, v4 = df.read$V4)
