@@ -1,4 +1,3 @@
-
 getcounts<-function(prefixlength=10,colss="Nss"){
   if(!require("dplyr")) BiocManager::install("dplyr",update = F,ask = F)
   if(!require("stringr")) BiocManager::install("stringr",update = F,ask = F)
